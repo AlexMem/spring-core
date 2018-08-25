@@ -10,6 +10,7 @@
     <context:annotation-config/>
 
     <bean class="contextlisteners.PostProxyInvokerContextListener"/>
+    <bean class="bfpps.DeprecationHandlerBeanFactoryPostProcessor"/>
     <bean class="bpps.ProfilingHandlerBeanPostProcessor"/>
     <bean class="bpps.InjectRandomIntAnnotationBeanPostProcessor"/>
 
