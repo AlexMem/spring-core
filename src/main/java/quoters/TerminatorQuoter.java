@@ -1,6 +1,7 @@
 package quoters;
 
 import annotations.InjectRandomInt;
+import annotations.PostProxy;
 import annotations.Profiling;
 
 import javax.annotation.PostConstruct;
@@ -28,7 +29,9 @@ public class TerminatorQuoter implements Quoter {
     }
 
     @Override
+    @PostProxy
     public void sayQuote() {
+        System.out.println("Phase 3: ");
         for (int i = 0; i < repeat; i++) {
             System.out.println(TerminatorQuoter.class.toString() + " says: " + message);
         }
