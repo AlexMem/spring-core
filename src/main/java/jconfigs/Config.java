@@ -1,4 +1,4 @@
-package configs;
+package jconfigs;
 
 import frames.ColorFrame;
 import org.springframework.context.annotation.*;
@@ -7,10 +7,10 @@ import java.awt.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Configuration
-@ComponentScan(basePackages = "frames")
+@ComponentScan(basePackages = {"frames", "bfpps"})
 public class Config {
     @Bean
-    @Scope("prototype")
+    @Scope("periodical")
     public Color color() {
         ThreadLocalRandom current = ThreadLocalRandom.current();
         return new Color(current.nextInt(255),
