@@ -11,6 +11,7 @@ import javax.annotation.PostConstruct;
 @DeprecatedClass(newImpl = T1000.class)
 public class TerminatorQuoter implements Quoter {
 
+
     @InjectRandomInt(min = 2, max = 7)
     private int repeat;
 
@@ -24,6 +25,10 @@ public class TerminatorQuoter implements Quoter {
 
     public TerminatorQuoter() {
         System.out.println("Phase 1");
+    }
+
+    public void setRepeat(int repeat) {
+        this.repeat = repeat;
     }
 
     public void setMessage(String message) {
