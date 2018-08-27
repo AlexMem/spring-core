@@ -68,7 +68,7 @@ public class AppConfig {
     @Bean
     public Unit zulJin() throws ParseException {
         Troll zulJin = new Troll();
-        zulJin.setColorCode(ThreadLocalRandom.current().nextInt(1, 10));
+        zulJin.setColorCode(ThreadLocalRandom.current().nextInt(1, 9));
         zulJin.setCreationDate(dateFormatter().parse(CHARACTER_CREATION_DATE));
         zulJin.setListOfMounts(Arrays.asList(Troll.DEFAULT_MOUNT, null, shadowTiger()));
         zulJin.setSetOfMounts(trollMountSet());
